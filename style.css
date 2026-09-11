@@ -85,6 +85,7 @@ body::after {
     /* padding: 18px; */
 }
 
+
 .card {
     width: min(550px, calc(100vw - 36px));
     /* max-height: calc(150vh - 36px); */
