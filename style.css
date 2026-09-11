@@ -54,22 +54,22 @@ body::after {
 @keyframes bgSlide {
     0%,
 25% {
-    background-image: url("images/dl_171016_haathi_mahal_0032.jpg");
+    background-image: url("./images/dl_171016_haathi_mahal_0032.jpg");
 }
 
 25%,
 50% {
-    background-image: url("images/DSC04203.jpg");
+    background-image: url("./images/DSC04203.jpg");
 }
 
 50%,
 75% {
-    background-image: url("images/DSC04379.jpg");
+    background-image: url("./images/DSC04379.jpg");
 }
 
 75%,
 100% {
-    background-image: url("images/DSC_8514.jpg");
+    background-image: url("./images/DSC_8514.jpg");
 }
 }
 
@@ -81,7 +81,7 @@ body::after {
     /* justify-content: center; */
     align-items: center;
     /* padding: 50px; */
-    padding: 10px;
+    padding: 20px;
     /* padding: 18px; */
 }
 
