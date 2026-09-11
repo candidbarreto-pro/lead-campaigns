@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Preferences</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="page">
+    <section class="card">
+
+        <!-- <header class="hero">
+            <h1>Enquire Form</h1>
+            <p>Fill out the form below and our experts will contact you shortly.</p>
+        </header> -->
+
+    <header class="hero">
+        <img src="images/logo_white.png " alt="Company Logo" class="hero-logo">
+        <p>Fill out the form below and our experts will contact you shortly.</p>
+    </header>
+
+        <form id="holidayForm" novalidate>
+
+            <fieldset>
+                <!-- <legend>Personal Details</legend> -->
+
+                <div class="grid two">
+
+                    <div class="field">
+                        <label for="first_name">First Name <span>*</span></label>
+                        <input id="first_name" name="first_name" type="text" placeholder="First name" autocomplete="given-name" require >
+                        <small class="error" data-error="first_name"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="last_name">Last Name <span>*</span></label>
+                        <input id="last_name" name="last_name" type="text" placeholder="Last name" autocomplete="family-name" require >
+                        <small class="error" data-error="last_name"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="date_of_birth">Date of Birth <span>*</span></label>
+                        <input id="date_of_birth" name="date_of_birth" type="date" required>
+                        <small class="error" data-error="date_of_birth"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="MaritalStatus">Marital Status <span>*</span></label>
+
+                        <select id="maritalstatus" name="maritalstatus" required>
+                            <option value="">Select Status</option>
+                            <option value="marriedcouple">Married Couple</option>
+                            <option value="couplepartner">Couple / Partner</option>
+                            <option value="family">Family</option>
+                        </select>
+
+                        <small class="error" data-error="destination"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="mobile">Mobile <span>*</span></label>
+
+                        <div class="phone-wrap" id="phoneWrap">
+                            <div class="phone-row">
+                                <span class="country-code">+91</span>
+                                <input id="mobile" name="mobile" type="tel" inputmode="numeric" maxlength="10" placeholder="10-digit number" autocomplete="tel-national">
+                            </div>
+
+                            <div id="otpInline" class="otp-inline" aria-hidden="true">
+                                <input id="otp" name="otp" type="text" inputmode="numeric" maxlength="6" placeholder="Enter OTP" autocomplete="one-time-code">
+                                <button type="button" id="verifyOtpBtn" class="secondary-btn">
+                                    Verify OTP
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="mobile-actions">
+                            <button type="button" id="sendOtpBtn" class="link-btn">
+                                Send OTP
+                            </button>
+
+                            <span id="resendTimer"></span>
+
+                            <span id="otpBadge" class="badge">Not verified</span>
+                        </div>
+
+                        <small class="hint">Enter your 10-digit Indian mobile number.</small>
+                        <small id="otpStatus" class="status"></small>
+                        <small class="error" data-error="mobile"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email <span>*</span></label>
+                        <input id="email" name="email" type="email" placeholder="Email address" autocomplete="email" require >
+                        <small class="error" data-error="email"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="state">State <span>*</span></label>
+
+                        <select id="state" name="state" required>
+                            <option value="">Select State</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                        </select>
+
+                        <small class="error" data-error="state"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="preferredholidaydestination">Preferred Holiday Destination <span>*</span></label>
+
+                        <select id="destination" name="destination" required>
+                            <option value="">Select Preference</option>
+                            <option value="India">India</option>
+                            <option value="International">International</option>
+                            <option value="Both">Both</option>
+                        </select>
+
+                        <small class="error" data-error="destination"></small>
+                    </div>
+
+
+
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <!-- <legend>Contact &amp; Travel Preferences</legend> -->
+
+                <div class="grid two">
+
+                    <!-- <div class="field">
+                        <label for="email">Email <span>*</span></label>
+                        <input id="email" name="email" type="email" placeholder="Email address" autocomplete="email" require >
+                        <small class="error" data-error="email"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="state">State <span>*</span></label>
+
+                        <select id="state" name="state" required>
+                            <option value="">Select State</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                        </select>
+
+                        <small class="error" data-error="state"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="destination">Destination <span>*</span></label>
+
+                        <select id="destination" name="destination" required>
+                            <option value="">Select Preference</option>
+                            <option value="India">India</option>
+                            <option value="International">International</option>
+                            <option value="Both">Both</option>
+                        </select>
+
+                        <small class="error" data-error="destination"></small>
+                    </div> -->
+
+
+                </div>
+            </fieldset>
+
+            <div class="consents">
+
+                <label class="check-row">
+                    <input type="checkbox" id="consent" name="consent" value="1" required>
+                    <span>
+                        Allow Karma Group related brands to communicate with me via
+                        sms/e-mail/call/WhatsApp/RCS during and after your submission
+                        on this promotional offer. <b>*</b>
+                    </span>
+                </label>
+
+                <label class="check-row">
+                    <input type="checkbox" id="disclaimer" name="disclaimer" value="1" required>
+                    <span>
+                        Should you be a registered DND subscriber, you agree that you
+                        have requested to be contacted about this Offer. <b>*</b>
+                    </span>
+                </label>
+
+                <small class="error" data-error="consent"></small>
+            </div>
+
+            <div id="formMessage" class="form-message" role="alert"></div>
+
+            <div class="actions">
+                <button type="submit" id="submitBtn" class="submit-btn">
+                    Submit
+                </button>
+            </div>
+
+        </form>
+    </section>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
