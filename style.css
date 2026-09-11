@@ -88,7 +88,7 @@ body::after {
 .card {
     width: min(550px, calc(100vw - 36px));
     /* max-height: calc(150vh - 36px); */
-    max-height: calc(105vh - 36px);
+    max-height: calc(120vh - 36px);
     overflow-y: auto;
     padding: 22px 32px 24px;
     background: rgba(12, 12, 14, 0.73);
