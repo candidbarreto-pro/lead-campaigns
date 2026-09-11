@@ -80,8 +80,8 @@ body::after {
     justify-content: left;
     /* justify-content: center; */
     align-items: center;
-    /* padding: 50px; */
-    padding: 20px;
+    padding: 50px;
+    /* padding: 20px; */
     /* padding: 18px; */
 }
 
