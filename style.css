@@ -296,13 +296,47 @@ select option {
 }
 
 .phone-row > input {
-    flex: 1;
-    width: auto;
+    flex: 1 1 auto;
+    min-width: 0;
+    width: 0;
     height: 38px;
     border: 0;
     border-radius: 0;
     background: transparent;
     box-shadow: none !important;
+}
+
+.get-otp-btn {
+    flex: 0 0 82px;
+    min-width: 82px;
+    width: 82px;
+    height: 30px;
+    margin: 0 5px 0 4px;
+    padding: 0 8px;
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+    background: var(--gold);
+    color: #171717;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1;
+    cursor: pointer;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+    opacity: 1;
+}
+
+.get-otp-btn:hover {
+    background: rgba(213, 174, 103, 0.28);
+}
+
+.get-otp-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
 }
 
 .phone-row > input:focus {
@@ -567,5 +601,15 @@ select option {
 
     .submit-btn {
         height: 40px;
+    }
+}
+@media (max-width: 600px) {
+    .get-otp-btn {
+        flex-basis: 78px;
+        min-width: 78px;
+        width: 78px;
+        padding: 0 6px;
+        font-size: 9px;
+        margin-right: 4px;
     }
 }
