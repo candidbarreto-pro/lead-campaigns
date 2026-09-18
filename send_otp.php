@@ -204,8 +204,8 @@ function cleanPhone($phone): string
 
 function Fstmsms(string $senderId, string $message, string $number): array
 {
-    $apiKey = 'A62YMHQLr0STUVM78ZeEvA';
-    $dltSenderId = '1707169925580288750';
+    $apiKey = 'api_key_here';
+    $dltSenderId = 'dlt_sender_id_here';
 
     $url = 'https://portal.vasudevsms.in/api/mt/SendSMS?' .
         'senderid=' . urlencode($senderId) .
